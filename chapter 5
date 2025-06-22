@@ -1,0 +1,88 @@
+# Sets & Dictionary
+a = {
+    "key": "value",
+    "harry": 100,
+    "shubham": 56
+}
+print(a, type(a))
+# b = int(input("enter a Number"))
+# print(b)
+print(a["key"])
+print(a["harry"])
+a.update({"rohan": 99})  # This will update the dictionary with a new key-value pair
+a = {
+    "harry": 100,
+    "shubham": 56,
+    "rohan": 99
+}
+print(a.get("harry"))  # This will return the value associated with the key "harry"
+print(a.get("harry", "not found"))  # This will return the value associated with the key "harry" or "not found" if the key does not exist
+print(a["harry"])  # This will return the value associated with the key "harry"
+print(a.keys())  # This will return a view object that displays a list of all the keys in the dictionary
+a.pop("harry")  # This will remove the key "harry" and return its value
+print(a)
+a.clear()  # This will remove all items from the dictionary
+print(a)  # This will print an empty dictionary
+# SETS # A set is a collection of unique elements
+s = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+s.add(10)  # This will add the element 10 to the set
+s.add(10)  # This will not add the element 10 again since sets do not allow duplicate elements
+print(s)  # This will print the set with the element 10 added
+s.remove(10)  # This will remove the element 10 from the set    
+print(s)  # This will print the set with the element 10 removed
+s.discard(10)  # This will not raise an error if the element 10 is not found in the set     
+print(s)  # This will print the set, which remains unchanged since 10 was already removed
+s.pop()  # This will remove and return an arbitrary element from the set
+print(s)  # This will print the set after removing an arbitrary element
+s.clear()  # This will remove all elements from the set 
+print(s)  # This will print an empty set
+# s = set()  # This will create an empty set
+ # dont use s = {} to create a set, as it will create an empty dictionary instead
+s = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+print(len(s))  # This will return the number of elements in the set
+print(s)  # This will print the set
+p= {11, 21, 31, 41, 15, 16, 17, 18, 19}
+print(s.union(p))  # This will return a new set with elements from both sets
+print(s.intersection(p))  # This will return a new set with elements that are common to both sets
+x={"Harry": 100, "Rohan": 200, "Shubham": 300}
+print(len(x))  # This will return the number of key-value pairs in the dictionary
+# print(s+p)  # This will return a new set with elements from both sets
+print(s | p)  # This will return a new set with elements from both sets, equivalent to s.union(p)   
+print(s & p)  # This will return a new set with elements that are common to both sets, equivalent to s.intersection(p)
+print(s - p)  # This will return a new set with elements that are in s but not in p     
+print(s ^ p)  # This will return a new set with elements that are in either s or p but not in both
+# Dictionary Comprehension  
+d = {i: i * i for i in range(1, 11)}  # This will create a dictionary with keys as numbers from 1 to 10 and values as their squares
+print(d)  # This will print the dictionary with squares of numbers from 1 to 10 
+# Set Comprehension
+s = {i for i in range(1, 11)}  # This will create a set with numbers from 1 to 10   
+print(s)  # This will print the set with numbers from 1 to 10
+print({1,2}.issubset({1,2,3,4,5}))  # This will return True since {1,2} is a subset of {1,2,3,4,5}
+print({1,2}.issuperset({1,2,3}))  # This will return False since {1,2} is not a superset of {1,2,3}
+# Problems 
+# 1. create a dictionary of hindi words and their meanings
+hindi_dict = {
+    "pyaar": "love",
+    "dosti": "friendship",
+    "khushi": "happiness",
+    "gussa": "anger",
+    "shanti": "peace"
+}   
+print(hindi_dict)  # This will print the dictionary with Hindi words and their meanings
+#2 Write a program to inpuut eight numbers from the user and store them in a set. Then print the set.
+user_input = set()  # Create an empty set to store unique numbers 
+for i in range(8):  # Loop to get 8 numbers from the user
+    num = int(input("Enter number : "))  # Input a number from the user
+    user_input.add(num)  # Add the number to the set (duplicates will be ignored)
+print(user_input)  # This will print the set with unique numbers
+d=set()  # Create an empty set to store unique numbers
+d.add(18)
+d.add(18.0)  # Adding a float that is equivalent to the integer 18
+d.add("18")  # Adding a string that represents the number 18
+print(d)  # This will print the set with unique elements, which will include 18, 18.0, and "18" as separate elements
+#3. crete an empty dictionary . allow 4 friends to enter their favourite languages and store them in the dictionary. The key will be the name of the friend and the value will be their favourite language.
+friends_languages = {}  # Create an empty dictionary to store friends' names and their favourite languages  
+for i in range(4):  # Loop to get input from 4 friends
+    name = input("Enter your name: ")  # Input the friend's name
+    language = input("Enter your favourite language: ")  # Input the friend's favourite language
+    friends_languages[name] = language  # Store the name as key and language as value in the dictionary

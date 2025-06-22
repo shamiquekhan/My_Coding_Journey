@@ -1,0 +1,23 @@
+ #arithmetics operators
+b=2*5
+b+= 6/3 
+c=3+b
+print(b)
+print(c)
+# type alteration
+a="34.6"
+b=float(a)
+print(type(a))
+print(type(b))
+# input fuction 
+a=input("enter number 1 ")
+b=input("enter number 2 ")
+print("number 1 is :",a)
+print("number 2 is :" ,b)
+print("sum of number 1 and number 2 is :",a+b)
+print("sum of numbers is :",int(a)+int(b))
+#  problem set 
+# problem 1 
+x=int(input("Enter the number That is to be devided : "))
+y=int(input("enter the divisor : "))
+print("the remender is :" , x%y)

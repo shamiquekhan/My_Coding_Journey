@@ -1,0 +1,6 @@
+#importing a modudle or a package 
+import pyjokes
+# this prints a ramdom joke
+joke = pyjokes.get_joke()
+print("printing jokes... ")
+print(joke)

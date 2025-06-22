@@ -1,0 +1,351 @@
+class Employee:
+    language = "python"
+    salary = 1200000
+
+    def print_details(self):
+        print(f"Name: {self.name}, Language: {self.language}, Salary: {self.salary}")
+
+    @classmethod
+    def get_language(cls):
+        return cls.language
+
+    @classmethod
+    def get_salary(cls):
+        return cls.salary
+
+    @staticmethod
+    def get_info():
+        return f"Employee Name: {getattr(Employee, 'name', 'N/A')}, Language: {Employee.language}, Salary: {Employee.salary}"
+
+harry = Employee()
+harry.name = "Harry"
+print(harry.salary, harry.language)
+harry.language = "C++"
+print(harry.salary, harry.language)
+
+rohan = Employee()
+rohan.name = "Rohan"
+rohan.language = "Java"
+print(rohan.salary, rohan.language)
+print(harry.salary, harry.language)
+
+harry.print_details()
+rohan.print_details()
+
+print(Employee.get_language())
+print(Employee.get_info())
+
+class Programmer(Employee):
+    def __init__(self, name, language, salary):
+        self.name = name
+        self.language = language
+        self.salary = salary
+
+    def print_details(self):
+        print(f"Name: {self.name}, Language: {self.language}, Salary: {self.salary}")
+        print(f"Employee Language: {Employee.get_language()}")
+        print(f"Employee Salary: {Employee.get_salary()}")
+
+rohan_programmer = Programmer("Rohan", "Java", 1500000)
+rohan_programmer.print_details()
+print(rohan_programmer.language)
+print(rohan_programmer.salary)
+print(rohan_programmer.name)
+print(Employee.language)
+print(Employee.salary)
+print(getattr(Employee, 'name', 'N/A'))
+print(Employee.get_language())
+print(Employee.get_salary())
+print(Programmer.get_language())
+print(Programmer.get_salary())
+print(Programmer.get_info())
+print(Programmer.get_info())
+#static method 
+@staticmethod
+def get_info():
+    return f"Employee Name: {getattr(Employee, 'name', 'N/A')}, Language: {Employee.language}, Salary: {Employee.salary}"
+print(Employee.get_info())
+# This will create a list of even numbers from 1 to 20
+even_numbers = [num for num in range(1, 21) if num % 2 == 0]
+print(even_numbers) 
+# This will create a list of odd numbers from 1 to 20
+odd_numbers = [num for num in range(1, 21) if num % 2 != 0] 
+print(odd_numbers)
+# This will create a list of numbers from 1 to 20 that are divisible by 3
+divisible_by_3 = [num for num in range(1, 21) if num % 3 == 0]
+print(divisible_by_3)   
+# This will create a list of numbers from 1 to 20 that are divisible by 5
+divisible_by_5 = [num for num in range(1, 21) if num % 5 == 0]
+print(divisible_by_5)
+# This will create a list of numbers from 1 to 20 that are divisible by both 3 and 5
+divisible_by_3_and_5 = [num for num in range(1, 21) if num % 3 == 0 and num % 5 == 0]
+print(divisible_by_3_and_5)
+# This will create a list of numbers from 1 to 20 that are divisible by either 3 or 5
+#practice set 
+#1. create a class "programmer" working at microsoft with attributes name, language, salary and methods print_details, get_language, get_salary, get_info
+class programmer:
+    def __init__(self, name, language, salary):
+        self.name = name
+        self.language = language
+        self.salary = salary
+
+    def print_details(self):
+        print(f"Name: {self.name}, Language: {self.language}, Salary: {self.salary}")
+
+    @classmethod
+    def get_language(cls):
+        return cls.language
+
+    @classmethod
+    def get_salary(cls):
+        return cls.salary
+
+    @staticmethod
+    def get_info():
+        return f"Programmer Name: {getattr(programmer, 'name', 'N/A')}, Language: {programmer.language}, Salary: {programmer.salary}"
+microsoft_programmer = programmer("Alice", "Python", 1200000)
+microsoft_programmer.print_details()
+# 2. write a class "calculator" capable of finding square , cube and square root of a number .
+
+class Calculator:
+    @staticmethod
+    def square(num):
+        return num ** 2
+
+    @staticmethod
+    def cube(num):
+        return num ** 3
+
+    @staticmethod
+    def square_root(num):
+        return num ** 0.5
+    @staticmethod
+    def cube_root(num):
+        return num ** (1/3)
+    @staticmethod
+    def power(num, exp):
+        return num ** exp
+    @staticmethod
+    def factorial(num):
+        if num == 0 or num == 1:
+            return 1
+        else:
+            return num * Calculator.factorial(num - 1)
+    @staticmethod
+    def logarithm(num, base=10):
+        import math
+        return math.log(num, base)  
+    @staticmethod
+    def absolute(num):
+        return abs(num)
+    @staticmethod
+    def round_number(num, ndigits=0):
+        return round(num, ndigits)
+    @staticmethod
+    def floor(num):
+        import math
+        return math.floor(num)
+    @staticmethod
+    def ceil(num):
+        import math
+        return math.ceil(num)
+    @staticmethod
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+    @staticmethod
+    def lcm(a, b):
+        return abs(a * b) // Calculator.gcd(a, b)
+    @staticmethod
+    def is_prime(num):
+        if num <= 1:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+    @staticmethod
+    def fibonacci(n):
+        fib_sequence = []
+        a, b = 0, 1
+        for _ in range(n):
+            fib_sequence.append(a)
+            a, b = b, a + b
+        return fib_sequence 
+    @staticmethod
+    def factorial_iterative(num):
+        result = 1
+        for i in range(2, num + 1):
+            result *= i
+        return result
+    @staticmethod
+    def power_iterative(base, exp):
+        result = 1
+        for _ in range(exp):
+            result *= base
+        return result
+    @staticmethod
+    def is_even(num):
+        return num % 2 == 0
+    @staticmethod
+    def is_odd(num):
+        return num % 2 != 0
+    @staticmethod
+    def is_palindrome(num):
+        return str(num) == str(num)[::-1]
+#3. crete a class with a class attribute a; create an object from it and set 'a' directly using object.a=0 . Does this change the class attribute?
+class MyClass:
+    a = 10  # Class attribute   
+    def __init__(self):
+        pass    
+    @classmethod
+    def get_a(cls):
+        return cls.a
+    @classmethod
+    def set_a(cls, value):
+        cls.a = value
+my_object = MyClass()
+my_object.a = 0  # This will change the instance attribute 'a', not the class attribute
+print(MyClass.get_a())  # This will print the class attribute 'a', which is still 10
+print(my_object.a)  # This will print the instance attribute 'a', which is now 0
+#4. create a class with a class attribute 'a' and a method to set 'a' using the class name. Does this change the class attribute?
+class AnotherClass:
+    a = 20  # Class attribute
+
+    @classmethod
+    def set_a(cls, value):
+        cls.a = value   
+    @classmethod
+    def get_a(cls):
+        return cls.a    
+another_object = AnotherClass()
+AnotherClass.set_a(30)  # This will change the class attribute 'a'  
+print(AnotherClass.get_a())  # This will print the class attribute 'a', which is now 30
+print(another_object.a)  # This will print the class attribute 'a', which is now 30 as well
+#5. create a class with a class attribute 'a' and a method to set 'a' using the instance. Does this change the class attribute?
+class YetAnotherClass:
+    a = 40  # Class attribute
+
+    def set_a(self, value):
+        self.a = value  # This will create an instance attribute 'a', not change the class attribute
+
+    @classmethod
+    def get_a(cls):
+        return cls.a    
+yet_another_object = YetAnotherClass()
+yet_another_object.set_a(50)  # This will create an instance attribute 'a', not change the class attribute
+print(YetAnotherClass.get_a())  # This will print the class attribute 'a', which is still 40
+print(yet_another_object.a)  # This will raise an AttributeError since 'a' is not defined in the instance       
+#6. create a class with a class attribute 'a' and a method to set 'a' using the instance. Does this change the class attribute?
+class FinalClass:
+    a = 60  # Class attribute
+
+    def set_a(self, value):
+        FinalClass.a = value  # This will change the class attribute 'a'
+
+    @classmethod
+    def get_a(cls):
+        return cls.a    
+final_object = FinalClass()
+final_object.set_a(70)  # This will change the class attribute 'a'  
+print(FinalClass.get_a())  # This will print the class attribute 'a', which is now 70
+print(final_object.a)  # This will print the class attribute 'a', which is now 70 as well
+#7. create a class with a class attribute 'a' and a method to set 'a' using the class name. Does this change the class attribute?
+class ClassWithAttribute:
+    a = 80  # Class attribute       
+    @classmethod
+    def set_a(cls, value):
+        cls.a = value  # This will change the class attribute 'a'   
+    @classmethod
+    def get_a(cls):
+        return cls.a   
+class_with_attr = ClassWithAttribute()
+class_with_attr.set_a(90)  # This will change the class attribute 'a'
+print(ClassWithAttribute.get_a())  # This will print the class attribute 'a', which is now 90
+print(class_with_attr.a)  # This will print the class attribute 'a', which is now 90 as well    
+#8. create a class with a class attribute 'a' and a method to set 'a' using the class name. Does this change the class attribute?
+class ClassWithStaticMethod:
+    a = 100  # Class attribute
+
+    @staticmethod
+    def set_a(value):
+        ClassWithStaticMethod.a = value  # This will change the class attribute 'a'
+
+    @classmethod
+    def get_a(cls):
+        return cls.a
+class_with_static = ClassWithStaticMethod()
+class_with_static.set_a(110)  # This will change the class attribute 'a'
+print(ClassWithStaticMethod.get_a())  # This will print the class attribute 'a', which is now 110
+print(class_with_static.a)  # This will print the class attribute 'a', which is now 110 as well
+#9. create a class with a class attribute 'a' and a method to set 'a' using the class name. Does this change the class attribute?
+class ClassWithClassMethod:
+    a = 120  # Class attribute
+
+    @classmethod
+    def set_a(cls, value):
+        cls.a = value  # This will change the class attribute 'a'
+
+    @classmethod
+    def get_a(cls):
+        return cls.a    
+class_with_class = ClassWithClassMethod()
+class_with_class.set_a(130)  # This will change the class attribute 'a' 
+print(ClassWithClassMethod.get_a())  # This will print the class attribute 'a', which is now 130
+print(class_with_class.a)  # This will print the class attribute 'a', which is now 130 as well  
+#10. create a calculator class with methods to square, cube and squareroot a number
+class calculater:
+    def __init__(self,n):
+        self.n = n
+    def square(self):
+        print(f"The square of {self.n} is {self.n ** 2}")
+    def cube(self):
+        print(f"The cube of {self.n} is {self.n ** 3}") 
+    def squareroot(self):
+        print(f"The square root of {self.n} is {self.n ** 0.5}")
+    @staticmethod
+    def hello():
+        print("Welcome to the Calculator class!")
+        print("This is a calculator class with methods to square, cube and square root a number.")
+        print("Use the methods square(), cube() and squareroot() to perform the respective operations.")    
+a= calculater(4)
+a.hello()  # This will print the description of the calculator class
+a.square()  # This will print the square of 4
+a.cube()  # This will print the cube of 4
+a.squareroot()  # This will print the square root of 4  
+#11. write a class train which has methods to book a ticket, get ststus(no. of seats ) and get fare information of the train under indian railways
+class train:
+    def __init__(self,name, seats, fare):
+        self.name = name
+        self.seats = seats
+        self.fare = fare
+        self.booked_seats = 0
+
+    def book_ticket(self, num_tickets):
+        if self.booked_seats + num_tickets <= self.seats:
+            self.booked_seats += num_tickets
+            print(f"Successfully booked {num_tickets} tickets.")
+        else:
+            print("Not enough seats available.")
+
+    def get_status(self):
+        print(f"Train Name: {self.name}")
+        print(f"Total Seats: {self.seats}")
+        print(f"Booked Seats: {self.booked_seats}")
+        print(f"Available Seats: {self.seats - self.booked_seats}")
+
+    def get_fare_info(self):
+        print(f"Train Name: {self.name}")
+        print(f"Fare: {self.fare}")
+    @staticmethod
+    def welcome():
+        print("Welcome to the Indian Railways Train Booking System!")
+        print("You can book tickets, check status and get fare information of the train.")
+        print("Use the methods book_ticket(), get_status() and get_fare_info() to perform the respective operations.")
+train1 = train("Rajdhani Express", 100, 1500)
+train1.welcome()  # This will print the welcome message 
+train1.get_fare_info()  # This will print the fare information of the train
+train1.get_status()  # This will print the status of the train  
+train1.book_ticket(5)  # This will book 5 tickets
+train1.get_status()  # This will print the status of the train after booking tickets

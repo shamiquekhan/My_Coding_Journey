@@ -1,0 +1,4 @@
+letter = "Dear Harry ,\n\tThis Python cource is nice . \nThanks"
+print(letter)
+print(letter.find("Python"))
+print(letter.replace("Harry", "Shamique"))

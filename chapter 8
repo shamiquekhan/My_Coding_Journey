@@ -1,0 +1,99 @@
+# Functions & Recursion
+def avg():
+    n=int(input("Enter the number of elements to calculate the average: "))
+    for i in range(n):
+        num = int(input(f"Enter number {i+1}: "))
+        if i == 0:
+            total = num
+        else:
+            total += num
+    avg = total / n
+    print(f"The average of the {n} numbers is {avg}")
+    # a = int(input("Enter first number: "))
+    # b = int(input("Enter second number: "))
+    # c = int(input("Enter third number: "))
+    # d = int(input("Enter fourth number: "))
+    # e = int(input("Enter fifth number: "))
+    # avg = (a + b + c + d + e) / 5
+    # print(f"The average of the five numbers is {avg}")
+avg()
+# Function with return value  
+def goodbye(name):
+    return f"Goodbye, {name}!"
+ending = goodbye("Alice")
+print(ending)
+# Calling the function and printing the returned value
+print(goodbye("Alice"))  # This will print "Goodbye, Alice!"
+# Function with Arguments
+def greet(name, age):
+    print(f"Hello, {name}! You are {age} years old.")
+greet("Alice", 30)
+greet("Bob", 25)
+# function with default arguments
+def greet_with_default(name, age=18):
+    print(f"Hello, {name}! You are {age} years old.")
+greet_with_default("Alice")  # This will use the default age of 18
+greet_with_default("Bob", 25)  # This will use the provided age of 25
+# Function with variable number of arguments
+def greet_multiple(*names):
+    for name in names:
+        print(f"Hello, {name}!")
+
+greet_multiple("Alice", "Bob", "Charlie")
+# Recursion
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+n = int(input("Enter a number to calculate its factorial: "))
+print(f"The factorial of {n} is {factorial(n)}")
+# practice set
+#1. write a function to find the maximum of three numbers entered by the user
+def max(a,b,c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: ")) 
+c = int(input("Enter third number: "))
+print(f"The maximum of {a}, {b}, and {c} is {max(a, b, c)}")
+# 2. write a function to convert celsius to fahrenheit and vice versa
+def cel_TO_Fah(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+def Fah_TO_cel(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = cel_TO_Fah(celsius)
+print(f"The temperature in Fahrenheit is {fahrenheit}")
+fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+celsius = Fah_TO_cel(fahrenheit)
+print(f"The temperature in Celsius is {celsius}")
+#3. WA recursive function to find the sum of first n natural numbers
+def sum_of_natural_numbers(n):
+    if n == 0:
+        return 0
+    else:
+        return n + sum_of_natural_numbers(n - 1)
+n = int(input("Enter a number to find the sum of first n natural numbers: "))
+print(f"The sum of first {n} natural numbers is {sum_of_natural_numbers(n)}")
+#4. wap to convert inches to centimeters using a function
+def inches_to_centimeters(inches):
+    centimeters = inches * 2.54
+    return centimeters
+
+def centimeters_to_inches(centimeters):
+    inches = centimeters / 2.54
+    return inches
+inches = float(input("Enter length in inches: "))
+centimeters = inches_to_centimeters(inches)
+print(f"The length in centimeters is {centimeters}")
+
+centimeters = float(input("Enter length in centimeters: "))
+inches = centimeters_to_inches(centimeters)
+print(f"The length in inches is {inches}")

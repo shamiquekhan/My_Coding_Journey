@@ -1,0 +1,105 @@
+with open("file.txt", "w") as f:
+#     f.write("Hello, this is a file created by Harry\n")
+    f.write("Hello, this is a file created by Harry\n")
+with open("file.txt") as f:
+    data = f.read()
+    print(data)
+#     print(l[i], end=" ")  # This will print each element of the list on the same line
+# Write mode 
+st='''Hello, this is a file created by Harry
+This is the second line of the file.
+This is the third line of the file.'''
+# This will create a file named "file.txt" and write the string to it
+with open("file.txt", "w") as f:
+    f.write(st)
+with open("file.txt", "r") as f:  # This will open the file in read mode
+    line1 = f.readline()  # This will read the first line of the file
+    print(line1)  # This will print the first line of the file
+    line2 = f.readline()  # This will read the second line of the file
+    print(line2)  # This will print the second line of the file
+    line3 = f.readline()  # This will read the third line of the file
+    print(line3)  # This will print the third line of the file
+# This will read the entire file and print it
+# Append mode
+with open("file.txt", "a") as f:  # This will open the file in append mode
+    f.write("\nThis is a new line added to the file.")  # This will add a new line to the file  
+with open("file.txt", "r") as f:  # This will open the file in read mode
+    data = f.read()  # This will read the entire file
+    print(data)  # This will print the entire file content
+# Binary mode
+with open("file.txt", "rb") as f:  # This will open the file in binary read mode
+    data = f.read()  # This will read the entire file in binary format
+    print(data)  # This will print the binary content of the file   
+# Binary write mode
+with open("file.bin", "wb") as f:  # This will create a binary file named "file.bin"
+    f.write(b"Hello, this is a binary file created by Harry")  # This will write a byte string to the binary file
+with open("file.bin", "rb") as f:  # This will open the binary file in read mode
+    data = f.read()  # This will read the entire binary file
+    print(data)  # This will print the binary content of the file
+# Binary append mode
+with open("file.bin", "ab") as f:  # This will open the binary file in append mode
+    f.write(b"\nThis is a new line added to the binary file.")  # This will add a new line to the binary file
+with open("file.bin", "rb") as f:  # This will open the binary file in read mode
+    data = f.read()  # This will read the entire binary file
+    print(data)  # This will print the binary content of the file
+#practice set
+# 1. write a program to read the text from a given file poems.txt and find out if it contains the word "twinkle"
+with open("poems.txt", "w") as f:  # This will create a file named "poems.txt" in write mode
+    f.write("Twinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky.\n")  # This will write a poem to the file
+with open("poems.txt", "r") as f:  # This will open the file "poems.txt" in read mode
+    content = f.read()  # This will read the entire file content
+    if "twinkle" in content.lower():  # This will check if the word "twinkle" is present in the content (case-insensitive)
+        print("The word 'twinkle' is present in the file.")
+    else:
+        print("The word 'twinkle' is not present in the file.")
+#2. the game function in a program lets a user play a game and record the highest score as a integer . you need to write a program that reads the highest score from a file named "highscore.txt" and updates it if the user achieves a new high score. If the file does not exist, create it and store the user's score.
+with open("highscore.txt", "w") as f:  # This will create a file named "highscore.txt" in write mode
+    f.write("57")  # This will initialize the high score to 0 in the file
+   # f.write("\n7")  # This will add a new line to the file
+def update_high_score(new_score):   
+    try:
+        with open("highscore.txt", "r") as f:  # This will open the file in read mode
+            high_score = int(f.read())  # This will read the high score from the file
+    except FileNotFoundError:  # This will handle the case where the file does not exist
+        high_score = 0  # If the file does not exist, set the high score to 0
+    
+    if new_score > high_score:  # This will check if the new score is greater than the current high score
+        with open("highscore.txt", "w") as f:  # This will open the file in write mode
+            f.write(str(new_score))  # This will write the new high score to the file
+        print(f"New high score achieved: {new_score}")
+    else:
+        print(f"Current high score remains: {high_score}")
+#3. wap to generate multiplication tables from 2 to 10 and store them in a file named "multiplication_tables.txt". Each table should be stored in a separate section with the table number as the header.
+with open("multiplication_tables.txt", "w") as f:  # This will create a file named "multiplication_tables.txt" in write mode
+    for i in range(2, 11):  # This will generate tables from 2 to 10
+        f.write(f"Multiplication Table for {i}:\n")  # This will write the table header
+        for j in range(1, 11):  # This will generate the table for the current number
+            f.write(f"{i} x {j} = {i * j}\n")  # This will write the multiplication result
+        f.write("\n")  # This will add a new line after each table
+        print(f"Multiplication table for {i} has been written to the file.")
+with open("multiplication_tables.txt", "r") as f:  # This will open the file in read mode
+    content = f.read()  # This will read the entire file content
+    print(content)  # This will print the content of the file  
+#4. WaP to  replace the word "Donkey" with "Monkey" in a file named "animals.txt". If the file does not exist, create it and write some initial content.
+with open("animals.txt", "w") as f:  # This will create a file named "animals.txt" in write mode
+    f.write("Donkey is a domesticated animal.\nDonkey is known for its strength and endurance.\n")  # This will write initial content to the file   
+with open("animals.txt", "r") as f:  # This will open the file in read mode
+    content = f.read()  # This will read the entire file content
+    print("Original Content:\n", content)  # This will print the original content of the file   
+with open("animals.txt", "w") as f:  # This will open the file in write mode
+    updated_content = content.replace("Donkey", "Monkey")  # This will replace "Donkey" with "Monkey"
+    f.write(updated_content)  # This will write the updated content back to the file
+with open("animals.txt", "r") as f:  # This will open the file in read mode
+    content = f.read()  # This will read the entire file content
+    print("Updated Content:\n", content)  # This will print the updated content of the file 
+# 5. wap to make a copy of a file named "source.txt" to a new file named "destination.txt". If the source file does not exist, create it with some initial content.
+with open("source.txt", "w") as f:  # This will create a file named "source.txt" in write mode
+    f.write("This is the source file.\nIt contains some initial content.")  # This will write initial content to the source file
+with open("source.txt", "r") as source_file:  # This will open the source file in read mode
+    content = source_file.read()  # This will read the entire content of the source file
+    print("Content of source.txt:\n", content)  # This will print the content of the source file
+with open("destination.txt", "w") as destination_file:  # This will create a file named "destination.txt" in write mode
+    destination_file.write(content)  # This will write the content to the destination file  
+with open("destination.txt", "r") as destination_file:  # This will open the destination file in read mode  
+    content = destination_file.read()  # This will read the entire content of the destination file
+    print("Content of destination.txt:\n", content)  # This will print the content of the destination file

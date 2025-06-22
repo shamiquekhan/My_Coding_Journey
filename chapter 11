@@ -1,0 +1,113 @@
+
+#p1.__mul__(p2)  # This will call the __mul__ method of the number class
+#p1.__truediv__(p2)  # This will call the __tr  
+#uediv__ method of the number class
+#p1.__floordiv__(p2)  # This will call the __flo
+#dunder methods
+#str__() used to set what gets printed when we print an object str(obJ)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"Person(Name: {self.name}, Age: {self.age})"
+
+    def __repr__(self):
+        return f"Person({self.name!r}, {self.age!r})"
+# Example usage:
+p = Person("Alice", 30)
+print(p)  # This will call the __str__ method and print "Person(Name: Alice, Age: 30)"
+print(repr(p))  # This will call the __repr__ method and print "Person
+#practice set
+#1. create a class 2d vector and use it to create another class 3d vector which inherits from 2d vector
+class Vector2D:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f"Vector2D({self.x}i + {self.y}j)"
+
+    def magnitude(self):
+        return (self.x**2 + self.y**2) ** 0.5
+class Vector3D(Vector2D):
+    def __init__(self, x, y, z):
+        super().__init__(x, y)  # Call the constructor of the parent class
+        self.z = z
+
+    def __str__(self):
+        return f"Vector3D({self.x}i + {self.y}j + {self.z}k)"
+
+    def magnitude(self):
+        return (self.x**2 + self.y**2 + self.z**2) ** 0.5
+# Example usage:
+v2d = Vector2D(3, 4)
+v3d = Vector3D(3, 4, 5)
+print(v2d)  # This will call the __str__ method of Vector2D
+print(v3d)  # This will call the __str__ method of Vector3D
+print(f"Magnitude of 2D vector: {v2d.magnitude()}")
+print(f"Magnitude of 3D vector: {v3d.magnitude()}")
+#2. create a class 'pets' from class animal and further create  class dog from pets . add a method bark in dog class
+class Animal:
+    def __init__(self, species):
+        self.species = species
+
+    def __str__(self):
+        return f"Animal(Species: {self.species})"
+class Pet(Animal):
+    def __init__(self, species, name):
+        super().__init__(species)  # Call the constructor of the parent class
+        self.name = name
+
+    def __str__(self):
+        return f"Pet(Name: {self.name}, Species: {self.species})"
+class Dog(Pet):
+    def __init__(self, name, breed):
+        super().__init__("Dog", name)  # Call the constructor of the parent class
+        self.breed = breed
+
+    def bark(self):
+        return "Woof!"
+    def __str__(self):
+        return f"Dog(Name: {self.name}, Breed: {self.breed})"
+# Example usage:
+dog = Dog("Buddy", "Golden Retriever")
+print(dog)  # This will call the __str__ method of Dog
+print(dog.bark())  # This will call the bark method of Dog  
+# write a class complex which can add and multiply complex numbers and multiply complex numbers
+class Complex:
+    def __init__(self, real, imaginary):
+        self.real = real
+        self.imaginary = imaginary
+
+    def __add__(self, other):
+        if isinstance(other, Complex):
+            return Complex(self.real + other.real, self.imaginary + other.imaginary)
+        return NotImplemented
+
+    def __mul__(self, other):
+        if isinstance(other, Complex):
+            real_part = self.real * other.real - self.imaginary * other.imaginary
+            imaginary_part = self.real * other.imaginary + self.imaginary * other.real
+            return Complex(real_part, imaginary_part)
+        return NotImplemented   
+    def __str__(self):
+        return f"{self.real} + {self.imaginary}i"
+    def __repr__(self):
+        return f"Complex({self.real!r}, {self.imaginary!r})"
+    @staticmethod
+    def from_string(s):
+        s = s.strip().replace(" ", "")
+        if "i" not in s:
+            raise ValueError("Invalid complex number format.")
+        real, imaginary = s.split("+")
+        imaginary = imaginary[:-1]  # Remove the trailing 'i'
+        return Complex(float(real), float(imaginary))
+# Example usage:
+c1 = Complex(2, 3)  
+c2 = Complex(4, 5)
+c3 = c1 + c2  # This will call the __add__ method
+c4 = c1 * c2  # This will call the __mul__ method
+print(c3)  # This will print the result of the addition
+print(c4)  # This will print the result of the multiplication
