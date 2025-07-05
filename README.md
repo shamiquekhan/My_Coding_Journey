@@ -7,14 +7,14 @@ Welcome to my journey of mastering programming through some of the best YouTube 
 ## 🐍 Python
 
 ### 1️⃣ Code with Harry – Python  
-📁 [`python/code_with_harry`](./python/code_with_harry)  
+📁 [`python/code_with_harry`](https://github.com/shamiquekhan/My_Coding_Journey/tree/Code-With-Harry-Python-YT-Cource)
 🧠 Covers core Python fundamentals with practical examples.  
 🔗 [Watch here](https://www.youtube.com/playlist?list=PLu0W_9lII9ajLcqRcj4PoEihkukF_OTzA)
 
 ---
 
 ### 2️⃣ Apna College (School) – Python  
-📁 [`python/apna_college`](./python/apna_college)  
+📁 [`python/apna_college`](https://github.com/shamiquekhan/My_Coding_Journey/tree/APNA-Python-Cource-YT)
 🚀 Easy-to-understand Python explained for beginners – great for clarity and coding exercises.  
 🔗 [Watch here](https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ)
 
@@ -22,7 +22,7 @@ Welcome to my journey of mastering programming through some of the best YouTube 
 
 ## 🌐 Web Development – HTML & CSS
 
-📁 [`web_dev/brocode_html_css`](./web_dev/brocode_html_css)  
+📁 [`web_dev/brocode_html_css`](https://github.com/shamiquekhan/My_Coding_Journey/tree/HTML-%26-CSS-Brocode-YT-Cource)  
 🎨 HTML, CSS, responsive layouts, and beginner web projects.  
 🔗 [Watch here](https://www.youtube.com/watch?v=HGTJBPNC-Gw)
 
