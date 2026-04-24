@@ -1,0 +1,168 @@
+# walrus operator
+# The walrus operator (:=) allows you to assign a value to a variable as part of an expression.
+# It can be useful in situations where you want to use a value immediately after assigning it.
+# # Example:
+def find_even_numbers(numbers):
+    even_numbers = [num for num in numbers if (n := num) % 2 == 0]
+    return even_numbers
+# Example usage:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = find_even_numbers(numbers)   
+print(f"Even numbers: {even_numbers}")  # This will print the even numbers from the list    
+# This will print the even numbers from the list
+# Output: Even numbers: [2, 4, 6, 8, 10]
+# types of definaton operators
+# 1. Assignment operator (=): Used to assign a value to a variable. 
+# Example: x = 5 assigns the value 5 to the variable x.
+# 2. Augmented assignment operators (+=, -=, *=, /=, %=,
+# **=, //=): Used to perform an operation and assign the result to a variable.
+# Example: x += 5 is equivalent to x = x + 5.
+# 3. Comparison operators (==, !=, <, >, <=, >=): Used to compare two values.
+# Example: x == 5 checks if the value of x is equal to 5.
+# 4. Identity operators (is, is not): Used to check if two variables point to the same object in memory.
+# Example: x is y checks if x and y are the same object.
+# 5. Membership operators (in, not in): Used to check if a value is present in a sequence (like a list or string).
+# Example: x in [1, 2, 3] checks if the value of
+# x is present in the list [1, 2, 3].
+# 6. Logical operators (and, or, not): Used to combine conditional statements.
+# Example: x > 5 and y < 10 checks if both conditions are true.
+# 7. Bitwise operators (&, |, ^, ~, <<, >>):
+# Used to perform bitwise operations on integers.
+# Example: x & y performs a bitwise AND operation on x and y.
+# 8. Conditional operator (ternary operator): Used to evaluate a condition and return one of two values based on the result.
+# Example: x if condition else y returns x if the condition is true, otherwise returns y
+# 9. Lambda operator (lambda): Used to create anonymous functions.
+# Example: square = lambda x: x * x creates a function that returns the square of x.
+# 10. Walrus operator (:=): Used to assign a value to a variable as
+# part of an expression, allowing you to use the value immediately.
+if (n:=len(numbers)) > 5:
+    print(f"The list has {n} elements, which is more than 5.")
+def print_multiplication_table(n):
+    """Prints the multiplication table of a given number n."""
+    i = 10
+    while i >= 1:
+        print(f"{n} x {i} = {n * i}")
+        i -= 1
+# Example usage:
+print_multiplication_table(5)  # This will print the multiplication table of 5  
+# Match Case
+def match_case_example(value):
+    """Demonstrates the use of match-case statement."""
+    match value:
+        case 1:
+            return "You entered one."
+        case 2:
+            return "You entered two."
+        case _:
+            return "You entered something else."
+# Example usage:
+print(match_case_example(1))  # This will print "You entered one."
+print(match_case_example(2))  # This will print "You entered two."
+print(match_case_example(3))  # This will print "You entered something else."
+#dictionary merge & update operators
+def merge_and_update_dicts(dict1, dict2):
+    """Merges two dictionaries and updates the first one with the second."""
+    merged_dict = dict1 | dict2  # Merges dict1 and dict2
+    dict1 |= dict2  # Updates dict1 with dict2
+    return merged_dict, dict1   
+# Example usage:
+dict1 = {"a": 1, "b": 2}    
+dict2 = {"b": 3, "c": 4}
+merged_dict, updated_dict1 = merge_and_update_dicts(dict1, dict2)
+print(f"Merged Dictionary: {merged_dict}")  # This will print the merged dictionary
+print(f"Updated Dictionary 1: {updated_dict1}")  # This will print the updated dictionary 1
+# Try Except
+def safe_divide(a, b):
+    """Attempts to divide a by b and handles division by zero."""
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        result = "Division by zero error"
+    except TypeError:
+        result = "Invalid input type"
+    except Exception as e:
+        result = f"An error occurred: {e}"
+    return result
+# Example usage:
+print(safe_divide(10, 2))  # This will print 5.0
+print(safe_divide(10, 0))  # This will print "Division by zero error"
+print(safe_divide(10, "a"))  # This will print "Invalid input type"
+print_multiplication_table(5)  # This will print the multiplication table of 5 in reverse order
+# raise statement
+def raise_example():
+    """Raises a custom exception."""
+    raise ValueError("This is a custom error message.")
+# Example usage:
+try:
+    raise_example() 
+except ValueError as e:
+    print(f"Caught an exception: {e}")
+# This will print "Caught an exception: This is a custom error message."    
+#try except else finally
+def try_except_else_finally_example():
+    try:
+        result = 10 / 2  # Check this line closely
+    except ZeroDivisionError:
+        print("Caught a division by zero error.")
+    else:
+        print(f"Result is {result}.")
+    finally:
+        print("This will always execute.")
+try_except_else_finally_example()
+# This will print "Result is 5.0." and "This will always execute."
+# global and local variables
+a= 10  # Global variable
+b=20  # Global variable
+def global_variable_example():
+    global b  # Declare b as global to modify it
+    b = 30  # Modify the global variable
+    print(f"Global variable b: {b}")
+def local_variable_example():
+    a = 5  # Local variable
+    print(f"Local variable a: {a}")
+    print(f"Global variable a: {globals()['a']}")  # Accessing global variable
+local_variable_example()
+# This will print "Local variable a: 5" and "Global variable a: 10"
+global_variable_example()
+# This will print "Global variable b: 30"
+#enumerate function
+def enumerate_example():
+    """Demonstrates the use of the enumerate function."""
+    fruits = ["apple", "banana", "cherry"]
+    for index, fruit in enumerate(fruits):
+        print(f"Index: {index}, Fruit: {fruit}")    
+# Example usage:
+enumerate_example() 
+# This will print the index and fruit name for each item in the list
+# Output:   
+# Index: 0, Fruit: apple
+# Index: 1, Fruit: banana
+# Index: 2, Fruit: cherry
+#list comprehension
+mylist = [1, 2, 3, 4, 5]
+def list_comprehension_example():
+    """Demonstrates the use of list comprehension."""
+    squared = [x**2 for x in mylist]
+    print(f"Squared values: {squared}")
+# Example usage:
+list_comprehension_example()
+# Practice Set  
+# wap to print 5th and 7th element from a list using enumerate function
+mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+def print_fifth_and_seventh_elements():
+    """Prints the 5th and 7th elements from a list using enumerate."""
+    for index, value in enumerate(mylist):
+        if index == 4:  # 5th element (index starts from 0)
+            print(f"5th element: {value}")
+        elif index == 6:  # 7th element
+            print(f"7th element: {value}")
+# Example usage:
+print_fifth_and_seventh_elements()
+# w a list comprehension to create a new list with squares of even numbers from the original list
+list1= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def squares_of_even_numbers():
+    """Creates a new list with squares of even numbers from the original list."""
+    even_squares = [x**2 for x in list1 if x % 2 == 0]
+    print(f"Squares of even numbers: {even_squares}")
+# Example usage:
+squares_of_even_numbers()

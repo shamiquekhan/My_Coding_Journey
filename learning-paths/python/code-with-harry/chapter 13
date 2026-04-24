@@ -1,0 +1,112 @@
+# Virtual environment
+# import virtualenv # importing virtualenv module
+# virtualenv.create_environment('myenv') # creating a virtual environment named myenv
+square = lambda x: x * x  # This is a lambda function that squares a number
+print(square(5))  # This will print 25, which is the square of 5
+# join operator
+def join_strings(strings, separator):
+    """Joins a list of strings with a specified separator."""
+    return separator.join(strings)  
+# Example usage:
+strings = ["Hello", "World", "from", "Python"]
+separator = " "
+print(join_strings(strings, separator))  # This will print "Hello World from Python"    
+# f-string
+def format_string(name, age):
+    """Formats a string using f-string."""
+    return f"My name is {name} and I am {age} years old."
+# Example usage:
+name = "Alice"  
+age = 30
+print(format_string(name, age))  # This will print "My name is Alice and I am 30 years old."    
+# format operator
+a ="{} is a good {}".format("Python", "programming language")
+# This will format the string using the format operator
+print(a)  # This will print "Python is a good programming language"
+# map filter and reduce
+from functools import reduce    
+def square(x):
+    """Returns the square of a number."""
+    return x * x
+def is_even(x):
+    """Returns True if the number is even, otherwise False."""
+    return x % 2 == 0
+def add(x, y):
+    """Returns the sum of two numbers."""
+    return x + y
+def map_example(numbers):
+    """Applies the square function to each element in the list."""
+    return list(map(square, numbers))  # This will return a list of squared numbers
+def filter_example(numbers):
+    """Filters the list to include only even numbers."""
+    return list(filter(is_even, numbers))  # This will return a list of even numbers
+def reduce_example(numbers):
+    """Reduces the list to a single value by summing all elements."""
+    return reduce(add, numbers)  # This will return the sum of all numbers in the list
+# Example usage:
+numbers = [1, 2, 3, 4, 5]
+print("Mapped (squared) values:", map_example(numbers))  # This will print the squared values
+print("Filtered (even) values:", filter_example(numbers))  # This will print the even values
+print("Reduced (sum) value:", reduce_example(numbers))  # This will print the sum of the numbers
+# This will create a list of numbers from 1 to 10, excluding numbers less than or equal to 5
+# practice set
+#1. wap to input name, marks and phone number of a student and print it in a formatted string
+def student_info(name, marks, phone):
+    """Formats and prints the student's information."""
+    return f"Student Name: {name}, Marks: {marks}, Phone: {phone}"  
+# Example usage:
+name = input("Enter student's name: ")
+marks = input("Enter student's marks: ")
+phone = input("Enter student's phone number: ")
+print(student_info(name, marks, phone))  # This will print the formatted string with student's information
+# 2. a list contains a multilplication table of 7 . wap to convert it into a vertical string
+l= [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]  # This is a list containing the multiplication table of 7
+vl= "\n".join(map(str, l))  # This will convert the list into a vertical string
+print(vl)  # This will print the multiplication table of 7 in a vertical format
+# 3. wap to filter multiples of five from a list of numbers using filter function
+list_of_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25]  # This is a list of numbers
+b=list(filter(lambda x: x%5==0, list_of_numbers))  # This will filter the multiples of 5 from the list
+print("Multiples of 5:", b)  # This will print the filtered list containing only multiples of 5
+#4. wap to find max of the number in a list using reduce function
+from functools import reduce
+ml= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # This is a list of numbers
+max_value = reduce(lambda x, y: x if x > y else y, ml)  # This will find the maximum value in the list
+print("Maximum value in the list:", max_value)  # This will print the maximum value found in the list
+# 5 make a webserserver using flask and python
+from flask import Flask, jsonify
+app = Flask(__name__)
+@app.route('/')
+def home():
+    """Home route that returns a welcome message."""
+    return jsonify({"message": "Welcome to the Flask web server!"})
+@app.route('/api/data')
+def get_data():
+    """API route that returns some sample data."""
+    data = {
+        "name": "Alice",
+        "age": 30,
+        "city": "Wonderland"
+    }
+    return jsonify(data)
+if __name__ == '__main__':
+    app.run(debug=True)
+# flask --version  # This will print the version of Flask installed357
+
+
+# This will run the Flask web server in debug mode
+  # This will run the Flask web server in debug mode
+# This will print the welcome message when accessing the home route
+# This will return sample data when accessing the /api/data route
+# This will create a Flask web server that can be accessed at http://
+# localhost:5000/
+# This will return a JSON response with the welcome message
+# This will return a JSON response with sample data
+# This will print the formatted string with student's information
+# This will print the multiplication table of 7 in a vertical format
+# This will print the filtered list containing only multiples of 5
+
+# This will print the maximum value found in the list
+# This will run the Flask web server in debug mode
+
+# This will create a Flask web server that can be accessed at http://localhost:5000/
+# This will return a JSON response with the welcome message

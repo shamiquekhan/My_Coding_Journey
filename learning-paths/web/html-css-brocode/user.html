@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the User Page</h1>
+    </header>
+    <form action="user.php" method="post" enctype="multipart/form-data" class="user-form">
+
+        <label for="Title">Title:</label>
+        <label for="Mr" name="Title">Mr</label>
+        <input type="radio" id="Mr" name="title" value="Mr" required>
+        <label for="Mrs" name="Title">Mrs</label>
+        <input type="radio" id="Mrs" name="title" value="Mrs" required>
+        <label for="Ms" name="Title">Ms</label>
+        <input type="radio" id="Ms" name="title" value="Ms" required>   
+        <label for="Dr" name="Title">Dr</label>
+        <input type="radio" id="Dr" name="title" value="Dr" required><br>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" minlength="5" required><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" minlength="5" maxlength="15" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"  maxlength="12" minlength="12" required><br>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>36
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+            <option value="australia">Australia</option>
+            <option value="other">Other</option>
+        </select><br>
+        <label for="Number of Kids">Number of Kids:</label>
+        <input type="number" id="kids" name="kids" min="0" max="10" required><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+        <label for="file">Profile Picture:</label>
+        <input type="file" id="file" name="file" accept="image/*" required><br>
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="4" cols="50" required></textarea><br>
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" maxlength="15" required><br>
+
+        <button type="reset">Reset</button><br>
+        <button type="submit">Submit</button><br>
+        <p id="thankYouMessage" style="display:none;">Thank you for submitting your
+    </form>
+    <footer>
+        <p>&copy; 2025 User Page</p>
+    </footer>
+</body>
+</html>

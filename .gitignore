@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build / Packaging
+build/
+dist/
+*.egg-info/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temp
+.tmp_worktrees/
+*.tmp

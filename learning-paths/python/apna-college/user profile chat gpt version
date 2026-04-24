@@ -1,0 +1,81 @@
+class UserManager:
+    def __init__(self):
+        self.users = []
+
+    def insert_user(self, name, username, email):
+        for user in self.users:
+            if user['username'] == username or user['email'] == email:
+                print("Error: Username or email already exists.")
+                return
+        self.users.append({'name': name, 'username': username, 'email': email})
+        print("User Added successfully.")
+
+    def find_user(self, username):
+        for user in self.users:
+            if user['username'] == username:
+                print(user)
+                return user
+        print("User not found.")
+        return None
+
+    def update_user(self, username, new_name=None, new_username=None, new_email=None):
+        for user in self.users:
+            if user['username'] == username:
+                if new_name:
+                    user['name'] = new_name
+                if new_username:
+                    for u in self.users:
+                        if u['username'] == new_username:
+                            print("Error: New username already exists.")
+                            return
+                    user['username'] = new_username
+                if new_email:
+                    for u in self.users:
+                        if u['email'] == new_email:
+                            print("Error: New email already exists.")
+                            return
+                    user['email'] = new_email
+                print("User updated successfully.")
+                return
+        print("User not found.")
+
+    def list_users(self):
+        names = [user['name'] for user in self.users]
+        print(names)
+
+def main():
+    user_manager = UserManager()
+
+    while True:
+        print("\nOptions:")
+        print("1. Insert user")
+        print("2. Find user")
+        print("3. Update user")
+        print("4. List all users")
+        print("5. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            name = input("Enter name: ")
+            username = input("Enter username: ")
+            email = input("Enter email: ")
+            user_manager.insert_user(name, username, email)
+        elif choice == '2':
+            username = input("Enter username to find: ")
+            user_manager.find_user(username)
+        elif choice == '3':
+            username = input("Enter username to update: ")
+            new_name = input("Enter new name (leave blank to keep current): ")
+            new_username = input("Enter new username (leave blank to keep current): ")
+            new_email = input("Enter new email (leave blank to keep current): ")
+            user_manager.update_user(username, new_name or None, new_username or None, new_email or None)
+        elif choice == '4':
+            user_manager.list_users()
+        elif choice == '5':
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
