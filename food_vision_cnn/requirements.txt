@@ -1,0 +1,6 @@
+tensorflow>=2.10
+numpy
+matplotlib
+pillow
+seaborn
+jupyter
