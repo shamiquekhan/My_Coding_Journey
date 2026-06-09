@@ -1,0 +1,45 @@
+class BasicHashTable:
+    def __init__(self, max_size=100000000):
+        self.data_list = [None] * max_size
+        self.max_size = max_size
+    
+    @staticmethod
+    def get_index(data_list, key):
+        # Simple hashing function to get the index
+        return hash(key) % len(data_list)
+    
+    def insert(self, key, value):
+        idx = BasicHashTable.get_index(self.data_list, key)
+        self.data_list[idx] = (key, value)
+    
+    def find(self, key):
+        idx = BasicHashTable.get_index(self.data_list, key)
+        kv = self.data_list[idx]
+        if kv is None:
+            return None
+        else:
+            key, value = kv
+            return value
+    
+    def update(self, key, value):
+        idx = BasicHashTable.get_index(self.data_list, key)
+        self.data_list[idx] = (key, value)
+    
+    def list_all(self):
+        return [kv[0] for kv in self.data_list if kv is not None]
+
+# Example usage
+basic_table = BasicHashTable(max_size=1024)
+print(len(basic_table.data_list) == 1024)  # Should be True
+basic_table.insert('aakash', '9999999')
+basic_table.insert('hemanth', '99998888')
+print(basic_table.find('hemanth'))  # Should return '99998888'
+basic_table.update('aakash', '989898')
+print(basic_table.find('aakash'))  # Should return '989898'
+print(basic_table.list_all())  # Should return ['aakash', 'hemanth']
+print(basic_table.find('hemanth') == 'aakash')  # Should return False
+basic_table.insert('listen', '99')
+basic_table.insert('silent', '200')
+print(BasicHashTable.get_index(basic_table.data_list, 'listen'), BasicHashTable.get_index(basic_table.data_list, 'silent'))
+
+

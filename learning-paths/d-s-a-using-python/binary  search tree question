@@ -1,0 +1,24 @@
+class Tree:
+    def __init__(self,key):
+        self.key = key
+        self.left=None
+        self.right=None
+node0=Tree(2)
+node1=Tree(3)
+node2=Tree(5)
+root=node0
+root.left=node1
+root.right=node2
+node11=Tree(1)
+node1.left=node11
+node21=Tree(3)
+node2.left=node21
+node22=Tree(7)
+node2.right=node22
+node212=Tree(4)
+node21.right=node212
+node221=Tree(6)
+node222=Tree(8)
+node22.left=node221
+node22.right=node222 
+print(root.right.right.right.key)       
