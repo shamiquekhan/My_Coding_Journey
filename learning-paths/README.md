@@ -1,15 +1,30 @@
-# Learning Paths
+# 📚 Learning Paths & Projects
 
-This directory contains all coding practice grouped by topic.
+A comprehensive collection of my coding journey, organized by domain and technology stack.
 
-## Tracks
+## 🧠 Machine Learning & AI
 
-- `python/apna-college/`: Python exercises and beginner projects from Apna College.
-- `python/code-with-harry/`: Python chapters and projects from Code With Harry.
-- `ml/Tensorflow/`: TensorFlow notebooks, dataset, and saved model artifacts.
-- `web/html-css-brocode/`: HTML/CSS practice files from Bro Code.
+### Core Frameworks
+- **[TensorFlow](ml/Tensorflow)**: Deep learning implementations, CNNs, and Transfer Learning notebooks.
+- **[PyTorch](ml/Pytorch)**: Custom models, MLP classifiers, and advanced neural networks.
+- **[Scikit-Learn](ml/Scikit-Learn)**: Classic ML algorithms, regression, and classification projects.
 
-## Notes
+### Specialized Tracks
+- **[Harvard CS50 AI](harward-cs50-ai)**: Projects exploring search, knowledge, uncertainty, optimization, and more.
+- **[IBM Data Science](ibm-datascience)**: Professional coursework covering data analysis and visualization.
+- **[Machine Learning Projects](machine-learning-projects)**: End-to-end implementations of ML models on real-world datasets.
 
-- Some legacy file names are preserved to keep historical progress intact.
-- A future cleanup pass can normalize names and add metadata per lesson.
+## 🐍 Python & Algorithms
+- **[DSA Using Python](d-s-a-using-python)**: Implementations of fundamental Data Structures and Algorithms.
+- **[Python Foundations (Apna College)](python/apna-college)**: Beginner-friendly exercises and projects.
+- **[Python Mastery (Code With Harry)](python/code-with-harry)**: Structured modules for deep Python understanding.
+
+## 🌐 Web Development
+- **[HTML & CSS Practice](web/html-css-brocode)**: Modern frontend foundations and layout design.
+
+## 🕹️ Fun & Miscellaneous
+- **[Fun Projects](fun-projects)**: A collection of mini-games (Dice Roller, Slot Machine, Tic Tac Toe, etc.).
+- **[General Projects](projects)**: Various utilities including an Alarm Clock, QR Scanner, and more.
+
+---
+*This repository serves as a live portfolio of my progress and skill development.*
