@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGear - Electronics Store</title>
+    <style>
+        :root {
+            --primary: #2a2a2a;
+            --secondary: #f5f5f5;
+            --accent: #007bff;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .product-gallery {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="product-container">
+        <section class="product-gallery">
+            <div class="main-image">
+                <img src="main-product.jpg" alt="Wireless Headphones" 
+                     class="active" id="mainImage">
+            </div>
+            <div class="thumbnail-grid">
+                <img src="thumb1.jpg" alt="Thumbnail 1" 
+                     @mouseover="updateMainImage('main-product.jpg')">
+                <img src="thumb2.jpg" alt="Thumbnail 2"
+                     @mouseover="updateMainImage('angle-view.jpg')">
+            </div>
+        </section>
+        
+        <section class="product-details">
+            <h1>Premium Wireless Headphones</h1>
+            <div class="price-container">
+                <span class="current-price">$199.99</span>
+                <span class="original-price">$299.99</span>
+            </div>
+            <div class="variant-selector">
+                <button class="color-option" 
+                        data-color="black" 
+                        @click="selectVariant('black')"></button>
+                <button class="color-option" 
+                        data-color="silver"
+                        @click="selectVariant('silver')"></button>
+            </div>
+            <button class="cart-btn" id="addToCart">Add to Cart</button>
+        </section>
+    </main>
+
+    <script>
+        const cart = {
+            items: [],
+            addItem(item) {
+                this.items.push(item);
+                localStorage.setItem('cart', JSON.stringify(this.items));
+            }
+        };
+
+        document.getElementById('addToCart').addEventListener('click', () => {
+            cart.addItem({
+                id: Date.now(),
+                name: document.querySelector('h1').textContent,
+                price: parseFloat(
+                    document.querySelector('.current-price').textContent.slice(1)
+                ),
+                quantity: 1
+            });
+        });
+
+        function updateMainImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+</body>
+</html>

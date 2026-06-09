@@ -1,0 +1,32 @@
+import cv2
+from pyzbar.pyzbar import decode
+
+def decode_image(path):
+    img = cv2.imread(path)
+    for qr in decode(img):
+        print(f"Data: {qr.data.decode()}")
+
+def realtime_scanner(camera_index=0):
+    cap = cv2.VideoCapture(camera_index)
+    detector = cv2.QRCodeDetector()
+    while True:
+        ret, frame = cap.read()
+        if not ret: break
+        data, bbox, _ = detector.detectAndDecode(frame)
+        if bbox is not None:
+            color = (0,255,0) if data else (0,0,255)
+            cv2.polylines(frame, [bbox.astype(int)], True, color, 2)
+            if data:
+                print(f"Decoded: {data}")
+                break
+        cv2.imshow("QR Scanner", frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'): break
+    cap.release()
+    cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    import sys
+    if sys.argv[1] == "--image":
+        decode_image(sys.argv[2])
+    else:
+        realtime_scanner()
