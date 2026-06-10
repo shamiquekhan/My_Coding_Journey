@@ -2,13 +2,6 @@
 
 A structured learning repository for Python, machine learning, and web development practice. It includes course exercises, notebooks, and mini projects from different learning tracks.
 
-## What Changed
-
-This repository is now organized by folders instead of branches.
-
-- Old course branches were converted into folders under `learning-paths/`
-- TensorFlow notebooks were moved into the same structure for consistency
-- Repository docs and contribution workflow were improved
 
 ## Repository Structure
 
