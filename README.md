@@ -1,64 +1,75 @@
 # 🚀 My Coding Journey
 
+[![GitHub Stars](https://img.shields.io/github/stars/shamiquekhan/My_Coding_Journey?style=social)](https://github.com/shamiquekhan/My_Coding_Journey)
+[![GitHub Forks](https://img.shields.io/github/forks/shamiquekhan/My_Coding_Journey?style=social)](https://github.com/shamiquekhan/My_Coding_Journey)
+[![Profile Views](https://komarev.com/ghpvc/?username=shamiquekhan&color=blue)](https://github.com/shamiquekhan)
+
 Welcome to my comprehensive coding portfolio. This repository documents my growth as a developer, showcasing a structured approach to learning Machine Learning, Data Science, Algorithms, and Full-Stack Development.
-
-## 📌 Overview
-
-This repository is organized into distinct **Learning Paths**, each representing a major milestone in my technical journey.
-
-### 🧠 [Machine Learning & AI](learning-paths/ml)
-- **PyTorch**: Custom neural networks, MLP classifiers, and CNNs.
-- **TensorFlow**: Deep learning implementations and transfer learning.
-- **Scikit-Learn**: Classic machine learning models and data preprocessing.
-- **Harvard CS50 AI**: Advanced AI concepts including search, optimization, and uncertainty.
-- **IBM Data Science**: Professional-grade data analysis and visualization workflows.
-
-### 🐍 [Python & Algorithms](learning-paths/d-s-a-using-python)
-- **DSA Using Python**: Robust implementations of core data structures and algorithms.
-- **Mastery Tracks**: Structured progress through courses like *Code With Harry* and *Apna College*.
-
-### 🌐 [Web Development](learning-paths/web)
-- **Foundations**: Modern HTML5 and CSS3 practices.
-- **Projects**: Responsive e-commerce layouts and interactive components.
-
-### 🕹️ [Featured Projects](learning-paths/projects)
-- **Fun Mini-Games**: Tic Tac Toe, Slot Machines, and Dice Rollers.
-- **Utilities**: Alarm clocks, QR scanners, and automated reporting tools.
 
 ---
 
-## 📂 Repository Structure
+## 📌 Featured Learning Paths
+
+Explore the different domains I've mastered through structured courses and hands-on projects.
+
+### 🧠 [Machine Learning & AI Core](learning-paths/ml)
+*Deep Dive into Neural Networks and Predictive Modeling.*
+- **PyTorch**: Custom architectures, MLP classifiers, and CNN implementations.
+- **TensorFlow**: Deep learning pipelines and advanced transfer learning.
+- **Scikit-Learn**: Statistical modeling and data preprocessing.
+
+### 🎓 Specialized Certifications
+- **[Harvard CS50 AI](learning-paths/harward-cs50-ai)**: Search algorithms, optimization, and uncertainty.
+- **[IBM Data Science](learning-paths/ibm-datascience)**: Professional data analysis, SQL, and visualization.
+- **[ML End-to-End](learning-paths/machine-learning-projects)**: Real-world project implementations.
+
+### 🐍 [Python Mastery & Algorithms](learning-paths/d-s-a-using-python)
+*Foundational logic and high-performance computing.*
+- **DSA**: Data Structures & Algorithms implemented in Python.
+- **Tracks**: Comprehensive course progress from Code With Harry & Apna College.
+
+### 🌐 [Web & General Projects](learning-paths/projects)
+*Full-stack foundations and useful utility scripts.*
+- **Web Foundations**: Modern HTML5/CSS3 and responsive design.
+- **Utilities**: Automation tools, mini-games, and logic exercises.
+
+---
+
+## 📂 Repository Organization
 
 ```text
 learning-paths/
-├── ml/                      # Machine Learning Core
-│   ├── Pytorch/             # Torch-based models
-│   ├── Tensorflow/          # Keras & TF notebooks
-│   └── Scikit-Learn/        # Regression & Classification
+├── ml/                      # Machine Learning Core (Torch, TF, Sklearn)
 ├── ibm-datascience/         # Data Science Professional Track
 ├── harward-cs50-ai/         # CS50 Artificial Intelligence
-├── machine-learning-projects/# End-to-end ML implementations
+├── machine-learning-projects/# Project-based ML implementations
 ├── d-s-a-using-python/      # Data Structures & Algorithms
-├── python/                  # Python Mastery (CWH, Apna College)
+├── python/                  # Mastery Courses (CWH, Apna College)
 ├── web/                     # Web Development Practice
-├── projects/                # General Utilities
-└── fun-projects/            # Mini Games & Logic Practice
+└── projects/                # Utilities & Fun Scripts
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technical Stack
 
-- **Languages**: Python, JavaScript, Java, HTML/CSS, SQL
-- **AI/ML**: PyTorch, TensorFlow, Scikit-Learn, Pandas, NumPy
-- **Tools**: Jupyter Notebooks, Git, GitHub CLI, Bash
+| Category | Technologies |
+| :--- | :--- |
+| **Languages** | Python, JavaScript, Java, SQL, HTML/CSS |
+| **AI / ML** | PyTorch, TensorFlow, Scikit-Learn, Keras |
+| **Data Science** | Pandas, NumPy, Matplotlib, Seaborn |
+| **Tools** | Jupyter, Git, GitHub CLI, Bash, VS Code |
 
 ---
 
-## 📈 Connect With Me
+## 📈 Connect & Collaborate
 
-- **Email**: [shamiqueKhan18@gmail.com](mailto:shamiqueKhan18@gmail.com)
-- **GitHub**: [@shamiquekhan](https://github.com/shamiquekhan)
-- **Instagram**: [@khan.shamique_18](https://www.instagram.com/khan.shamique_18)
+I'm always open to discussing new projects or technical challenges!
 
-> *"Code. Break. Learn. Repeat."*
+- 📧 **Email**: [shamiqueKhan18@gmail.com](mailto:shamiqueKhan18@gmail.com)
+- 🐙 **GitHub**: [@shamiquekhan](https://github.com/shamiquekhan)
+- 📸 **Instagram**: [@khan.shamique_18](https://www.instagram.com/khan.shamique_18)
+
+---
+
+> *"Code. Break. Learn. Repeat. The journey of a thousand commits begins with a single line."*
