@@ -1,68 +1,64 @@
-# My Coding Journey
+# 🚀 My Coding Journey
 
-A structured learning repository for Python, machine learning, and web development practice. It includes course exercises, notebooks, and mini projects from different learning tracks.
+Welcome to my comprehensive coding portfolio. This repository documents my growth as a developer, showcasing a structured approach to learning Machine Learning, Data Science, Algorithms, and Full-Stack Development.
 
+## 📌 Overview
 
-## Repository Structure
+This repository is organized into distinct **Learning Paths**, each representing a major milestone in my technical journey.
+
+### 🧠 [Machine Learning & AI](learning-paths/ml)
+- **PyTorch**: Custom neural networks, MLP classifiers, and CNNs.
+- **TensorFlow**: Deep learning implementations and transfer learning.
+- **Scikit-Learn**: Classic machine learning models and data preprocessing.
+- **Harvard CS50 AI**: Advanced AI concepts including search, optimization, and uncertainty.
+- **IBM Data Science**: Professional-grade data analysis and visualization workflows.
+
+### 🐍 [Python & Algorithms](learning-paths/d-s-a-using-python)
+- **DSA Using Python**: Robust implementations of core data structures and algorithms.
+- **Mastery Tracks**: Structured progress through courses like *Code With Harry* and *Apna College*.
+
+### 🌐 [Web Development](learning-paths/web)
+- **Foundations**: Modern HTML5 and CSS3 practices.
+- **Projects**: Responsive e-commerce layouts and interactive components.
+
+### 🕹️ [Featured Projects](learning-paths/projects)
+- **Fun Mini-Games**: Tic Tac Toe, Slot Machines, and Dice Rollers.
+- **Utilities**: Alarm clocks, QR scanners, and automated reporting tools.
+
+---
+
+## 📂 Repository Structure
 
 ```text
 learning-paths/
-	ml/
-		Tensorflow/
-	python/
-		apna-college/
-		code-with-harry/
-	web/
-		html-css-brocode/
+├── ml/                      # Machine Learning Core
+│   ├── Pytorch/             # Torch-based models
+│   ├── Tensorflow/          # Keras & TF notebooks
+│   └── Scikit-Learn/        # Regression & Classification
+├── ibm-datascience/         # Data Science Professional Track
+├── harward-cs50-ai/         # CS50 Artificial Intelligence
+├── machine-learning-projects/# End-to-end ML implementations
+├── d-s-a-using-python/      # Data Structures & Algorithms
+├── python/                  # Python Mastery (CWH, Apna College)
+├── web/                     # Web Development Practice
+├── projects/                # General Utilities
+└── fun-projects/            # Mini Games & Logic Practice
 ```
 
-## Learning Tracks
+---
 
-### Python
+## 🛠️ Tech Stack
 
-- Code With Harry course files: `learning-paths/python/code-with-harry/`
-- Apna College course files: `learning-paths/python/apna-college/`
+- **Languages**: Python, JavaScript, Java, HTML/CSS, SQL
+- **AI/ML**: PyTorch, TensorFlow, Scikit-Learn, Pandas, NumPy
+- **Tools**: Jupyter Notebooks, Git, GitHub CLI, Bash
 
-### Machine Learning
+---
 
-- TensorFlow notebooks and model artifacts: `learning-paths/ml/Tensorflow/`
+## 📈 Connect With Me
 
-### Web Development
+- **Email**: [shamiqueKhan18@gmail.com](mailto:shamiqueKhan18@gmail.com)
+- **GitHub**: [@shamiquekhan](https://github.com/shamiquekhan)
+- **Instagram**: [@khan.shamique_18](https://www.instagram.com/khan.shamique_18)
 
-- Bro Code HTML/CSS projects: `learning-paths/web/html-css-brocode/`
-
-## Quick Start
-
-1. Clone the repository.
-2. Open a track folder under `learning-paths/`.
-3. For notebook work, create a virtual environment and install:
-
-```bash
-pip install jupyter tensorflow pandas numpy matplotlib scikit-learn
-```
-
-4. Launch Jupyter:
-
-```bash
-jupyter notebook
-```
-
-## Suggested Next Improvements
-
-- Standardize file naming (spaces to hyphens, typo fixes) in a dedicated cleanup pass
-- Add per-track requirements files
-- Add notebook output cleanup before commits
-- Add simple tests for script-based folders
-
-## Contribution
-
-Please check `CONTRIBUTING.md` for folder, naming, and commit conventions.
-
-## Connect
-
-- Email: [shamiqueKhan18@gmail.com](mailto:shamiqueKhan18@gmail.com)
-- GitHub: [shamiquekhan](https://github.com/shamiquekhan)
-- Instagram: [khan.shamique_18](https://www.instagram.com/khan.shamique_18)
-
-Code. Break. Learn. Repeat.
-
+> *"Code. Break. Learn. Repeat."*
